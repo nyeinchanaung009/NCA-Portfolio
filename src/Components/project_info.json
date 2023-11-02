@@ -1,0 +1,84 @@
+{
+	"data" : [
+		{
+            "id" : 1,
+			"title" : "Pucca Jewellery",
+            "subtitle" : "Bussiness page & mini ecommerce",
+            "paragraph" : "Jewellery selling page - Front-end website with React js & Tailwind css. Can view products, searching, ordering & include events, contact pages.",
+            "images" : [
+                "/project_images/pucca1.png",
+                "/project_images/pucca2.png",
+                "/project_images/pucca3.png",
+                "/project_images/pucca4.png",
+                "/project_images/pucca5.png"
+            ],
+            "features" : [
+                "Products exploring",
+                "Products Search & Filter by name, categories, materials, product code",
+                "Add to Cart",
+                "paginated view products",
+                "Add to Favourite products"
+            ],
+            "code_link" : "https://github.com/nyeinchanaung009/pucca-jewellery",
+            "demo_link" : " https://pucca-jewellery.pages.dev",
+            "duration" : "2 Weeks",
+            "react" : true,
+            "vue" : false,
+            "tailwind" : true
+		},
+        {
+            "id" : 2,
+			"title" : "M-vix Movies",
+            "subtitle" : "Movie app",
+            "paragraph" : "Front-end movie app with Vue js Tailwind css, Exploring movies, series & tv shows, view trailers and search movies by casts",
+            "images" : [
+                "/project_images/mvix1.png",
+                "/project_images/mvix2.png",
+                "/project_images/mvix3.png",
+                "/project_images/mvix4.png"
+            ],
+            "features" : [
+                "Search movies by name, gneres, released year, cast",
+                "Search cast",
+                "View trailers",
+                "View cast",
+                "Pagination",
+                "Add to watchlist"
+            ],
+            "code_link" : "https://github.com/nyeinchanaung009/mvix-movies",
+            "demo_link" : "https://mvix-movies.pages.dev",
+            "duration" : "3 Weeks",
+            "react" : false,
+            "vue" : true,
+            "tailwind" : true
+        },
+        {
+            "id" : 3,
+			"title" : "Mymemo Note",
+            "subtitle" : "Note taking & add Todo list app",
+            "paragraph" : "Front-end app with React js & Tailwind css, note taking and add Todo app with dark & light theme",
+            "images" : [
+                "/project_images/memo1.png",
+                "/project_images/memo2.png",
+                "/project_images/memo3.png",
+                "/project_images/memo4.png"
+            ],
+            "features" : [
+                "Add notes",
+                "Notes - CRUD",
+                "Add or remove to highlight note",
+                "Multiselect Delete",
+                "Trash notes will delete permanently in 30 days",
+                "Restore notes from trash notes",
+                "Todo list - CRUD",
+                "Finished todo list or unfinish"
+            ],
+            "code_link" : "https://github.com/nyeinchanaung009/ReactJS-Note-App",
+            "demo_link" : "https://mymemo-note-app.pages.dev/",
+            "duration" : "1.5 Weeks",
+            "react" : true,
+            "vue" : false,
+            "tailwind" : true
+        }
+	]
+}

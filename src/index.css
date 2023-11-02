@@ -1,0 +1,406 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+    /* --accentblue : #00d4eb; */
+    --accentblue : #00e5ff;
+    --accentorange : #ffae28;
+    --secblue:#21a0d0;
+    
+    /* org bg0 color*/
+    /* --bg0:#24344E; */
+
+    --bg0:#1a2d4b;
+    --bg1:#22334e;
+    --bg2:#151d27;
+    --bg3:#131921;
+    --bg4:#11161d;
+    --graimg:#141b25;
+    --cardbg : #151c27;
+
+    --blurbg:#172334cb;
+    --blurbg2:#90e3ff0d;
+
+    --bordercolor:#455672ab;
+    --bordercolor2:#8cb0e90b;
+
+    --tpri : #ffffff;
+    --tsec : #d4e0ee;
+    --tmute : #a4acc1;
+    --iconcolor:#949ebd;
+
+    --f-sora: 'Sora', sans-serif;
+    --f-bebas: 'Bebas Neue', sans-serif;
+    --f-inter:'Inter', sans-serif;
+    --f-pop:'Poppins', sans-serif;
+}
+
+
+
+/* ================================== utils ==================================== */
+.bggra{
+    background: linear-gradient(to bottom,var(--bg1),var(--bg2) 85%) !important;
+}
+
+.bggra3{
+    background: linear-gradient(to bottom,var(--bg0),var(--bg2) 85%) !important;
+}
+
+.bggra2{
+    background: linear-gradient(45deg,#0e6bc1,#09cdf9 7%) !important;
+}
+
+.bgbtn{
+    background: linear-gradient(45deg,#006dd4 30%,#09cdf9 80%) !important;
+    background-size: 120%;
+    background-position: right;
+}
+
+.bgbtn:hover{
+    background-position: center;
+}
+
+.tstroke{
+    -webkit-text-stroke: 0.1px #6978899c;
+}
+
+
+
+/* ================================== resuable components ==================================== */
+.mybtn{
+    @apply text-tpri font-semibold tracking-wide px-9 py-2 rounded-sm shadow bgbtn border-t-[3px] border-cyan-400/70;
+    transition: background 0.2s,opacity 0.6s ease-out 0.66s,transform 0.6s ease-out 0.66s;
+}
+
+.mybtn2{
+    @apply text-tpri font-semibold tracking-wide ps-10 pe-14 py-2 rounded-sm shadow bgbtn border-t-[3px] border-cyan-400/70;
+    transition: background 0.2s,opacity 0.6s ease-out 0.66s,transform 0.6s ease-out 0.66s;
+}
+
+.mybtn3{
+    @apply text-tpri font-medium font-finter text-sm tracking-wider px-4 py-1 rounded-sm shadow bg-secblue hover:bg-accentorange border-t-[3px] border-cyan-400/70 hover:border-orange-200;
+    transition: background 0.1s,transform 0.8s 0.6s, opacity 0.8s 0.6s;
+}
+
+.title{
+    @apply font-fpop font-[700] text-tpri text-[28px] tracking-wider relative mx-auto w-fit;
+}
+
+.title::before{
+    content: '';
+    @apply absolute left-0 -bottom-[3px] w-full h-[2px] rounded bg-accentblue
+}
+
+.subtitle{
+    @apply font-fsora font-[900] text-[12px] text-tmute text-center mt-3;
+}
+
+.accentball{
+    @apply w-[140px] h-[140px] bg-[#6cd3ff] rounded-full blur-[10px] opacity-[0.18] absolute;
+    box-shadow: 0 0 180px 12px var(--accentblue);
+}
+
+.boxshadow{
+    filter : drop-shadow(0 0 50px #3260a42d);
+    backdrop-filter: blur(10px);
+}
+
+.overlay{
+    background:linear-gradient(to bottom,transparent 30%,#151c27d7 90%);
+}
+
+.myfade-in{
+    opacity: 1 !important;
+    transform: translate(0,0) !important;
+}
+
+/* ================================== classes ==================================== */
+body{
+    cursor:url('/icons/my cursor.png') 10 3,auto;
+}
+
+
+
+/*----------------- nav bar ------------- */
+.navlink.active{
+    @apply text-accentblue font-medium;
+}
+
+.navlink.active::before{
+    content:'';
+    @apply w-[11.5px] h-[1.5px] bg-accentblue rounded-full absolute -bottom-[6px] right-[45.5%] z-[2];
+}
+
+.navv{
+    @apply fixed w-full -top-1 bg-[#1a2c48] hidden sm:block z-30;
+    transition: transform ease-out 0.3s;
+}
+
+.navvblur{
+    @apply fixed w-full -top-1 bg-blurbg border-b-2 border-bordercolor2 hidden sm:block z-30 backdrop-blur-[2px];
+    transition: transform ease-out 0.3s;
+}
+
+
+
+/*----------------- mobile nav ------------- */
+.mobile-navlink.active > *{
+    @apply text-accentblue;
+}
+
+.mobile-navlink.active::before{
+    content:'';
+    @apply w-[6px] h-[6px] bg-accentblue rounded-full absolute right-[17px] -top-[5px];
+}
+
+.cliptext{
+    background-clip: text !important;
+}
+
+.iconball{
+    transform-origin: left;
+    transform-style: preserve-3d;
+}
+
+.tshadow:hover{
+    text-shadow: 0 0 15px var(--secblue);
+}
+
+.dshadow:hover{
+    filter: drop-shadow(0 0 3px var(--secblue));
+}
+
+/*----------------- welcome section ------------- */
+#arrowdown{
+    animation:updown 1s ease-out infinite alternate !important;
+}
+
+@keyframes updown {
+    from{
+        opacity: 0;
+        transform: translateY(-7px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(4px);
+    }
+}
+
+
+
+/*----------------- about section ------------- */
+.iconball1{
+    transform: rotate(0deg);
+}
+
+.iconball2{
+    transform: rotate(135deg);
+}
+
+.iconball3{
+    transform: rotate(265deg);
+}
+
+.iconball4{
+    transform: rotate(220deg);
+}
+
+.iconball5{
+    transform: rotate(45deg);
+}
+
+.iconball6{
+    transform: rotate(175deg);
+}
+
+.iconball7{
+    transform: rotate(310deg);
+}
+
+.iconball8{
+    transform: rotate(90deg);
+}
+
+#ball1{
+    animation-delay: 2s;
+}
+
+#ball5{
+    animation-delay: 1.5s;
+}
+
+#ball2{
+    animation-delay: 1s;
+}
+
+#ball4{
+    animation-delay: 0.5s;
+}
+
+#ball3{
+    animation-delay: 0s;
+}
+
+.bitem{
+    animation : myspin 3s linear infinite;
+}
+
+.minidot{
+    transform-origin: right center;
+    animation : myrotate 32s linear infinite;
+}
+
+@keyframes myspin {
+    from{
+        transform: rotateX(0deg);
+        box-shadow: 0 0 25px 2px #00d4eb24;
+    }
+    to{
+        transform: rotateX(-360deg);
+        box-shadow: 0 0 15px 2px #00d4eb11;
+    }
+}
+
+@keyframes myrotate {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.rotator{
+    animation:myrotate 23s linear infinite !important;
+}
+
+
+
+/*----------------- skill section ------------- */
+.aboutbg{
+    background-color: #131921;
+	opacity: 1;
+	background-image: radial-gradient(#5b7187 1.22px, #131921 1.22px);
+	background-size: 40px 40px;
+}
+
+.skillbg{
+    background: linear-gradient(var(--bg4) 72%,transparent 20%);
+}
+
+.back,.front{
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+}
+
+.back{
+    transform: rotateY(180deg);
+}
+
+.skillcard{
+    transform-style: preserve-3d;
+}
+
+.c1{
+    box-shadow: 0 5px 1px #304560 inset;
+}
+
+.c2,.c3{
+    box-shadow: 0 3px 4px #1a232f inset;
+}
+
+.skillcard:hover{
+    transform: rotateY(180deg);
+}
+
+.front img,.front h2{
+    transform: translateZ(75px);
+}
+
+.front h1{
+    transform: translateZ(130px);
+}
+
+.back > *{
+    transform: translateZ(75px);
+}
+
+.skillboxoverlay{
+    content: '';
+    @apply w-[300px] h-[300px] rounded-full opacity-[0.28] blur-[4px] absolute -right-[30px] top-[52%] -z-[10];
+    background: radial-gradient( #1a689f,#044d8099 70%);
+    box-shadow: 0 0 115px 15px #044d80;
+}
+
+
+
+/*----------------- portfolio section ------------- */
+.titleblock1::before{
+    content : '';
+    @apply w-[3.5px] h-[60%] absolute top-[5px] -left-4 bg-accentblue z-[2];
+}
+
+.titleblock2::before{
+    content : '';
+    @apply w-[3.5px] h-[60%] absolute top-[7px] -right-5 bg-accentblue z-[2];
+}
+
+
+
+/*----------------- contact section ------------- */
+.udcolor{
+    text-decoration: underline 1px #575e64;
+    text-underline-offset: 4px;
+}
+
+.inputborder{
+    border:1px solid var(--bordercolor2);
+    border-top: 3px solid #36406168;
+    backdrop-filter: blur(2px);
+}
+
+.contactinput1{
+    transition: transform 0.48s,opacity 0.48s;
+    transition-delay: 0.3s;
+}
+
+.contactinput2{
+    transition: transform 0.48s,opacity 0.48s;
+    transition-delay: 0.45s;
+}
+
+.contactinput3{
+    transition: transform 0.52s,opacity 0.52s;
+    transition-delay: 0.65s;
+}
+
+.contactinput4{
+    transition: transform 0.6s,opacity 0.6s;
+    transition-delay: 0.8s;
+}
+
+
+/*----------------- project detail ------------- */
+.pjimgfooter{
+    clip-path: polygon(0 0, 77% 0, 100% 100%, 0% 100%);
+}
+
+
+/* =========== scroll bar =========== */
+::-webkit-scrollbar{
+    width: 10px;
+    background-color: var(--bg3) !important;
+}
+
+::-webkit-scrollbar-thumb{
+    width: 10px;
+    background-color: var(--secblue);
+    border-radius: 9px;
+    border-left: 2px solid var(--accentblue);
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background-color: var(--accentorange);
+    border-left: none !important;
+}
