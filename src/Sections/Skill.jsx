@@ -26,11 +26,8 @@ const Skill = memo(() => {
                                     <Vector className="text-[22px] text-accentblue" />
                                 </div>    
                                 <h1 className='font-fsora text-tsec text-[15px] font-light text-center leading-6 mt-6'>
-                                    Wireframing and Prototyping of 
-                                    web interfaces. Illustrate 
-                                    custom svg and make banners 
-                                    & posters desgin for web page 
-                                    if necessary
+                                Wireframing and Prototyping
+                                of web interfaces with Figma.
                                 </h1>
                             </div>
                         </div>
@@ -48,11 +45,10 @@ const Skill = memo(() => {
                                     <i className="bi bi-braces text-[24px] text-accentblue" />
                                 </div>    
                                 <h1 className='font-fsora text-tsec text-[15px] font-light text-center leading-6 mt-5'>
-                                    Develop custom web pages, 
-                                    Portfolio websites, landing 
-                                    pages and static websites 
-                                    using current technologies and 
-                                    framework
+                                Develop static websites,
+                                single page applications (SPA)
+                                using current technologies and
+                                framework like Vue JS & React JS.
                                 </h1>
                             </div>
                         </div>
@@ -70,11 +66,8 @@ const Skill = memo(() => {
                                     <Server className="text-[22px] text-accentblue" />
                                 </div>    
                                 <h1 className='font-fsora text-tsec text-[15px] font-light text-center leading-6 mt-3'>
-                                    Develop admin pannel,
-                                    ecommerce, and other 
-                                    backend relative websites with php,
-                                    laravel and mySql 
-                                    database, api, integrate O-auth authentication
+                                Develop backend relative websites and API with PHP, Laravel 
+                                and MySql database. 
                                 </h1>
                             </div>
                         </div>

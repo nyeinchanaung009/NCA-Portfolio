@@ -28,7 +28,7 @@ const BgMusic = memo(() => {
   return (
     <>
         {/* ====================================================== background music ========================================= */}
-        <div title='Background Music' className='fixed left-0 top-[15%] z-30 bg-bg4 rounded-r-md ps-[5px] pe-[2px] py-[3px] border border-slate-600/40 cursor-pointer -translate-x-11 hover:-translate-x-[4px] duration-300 ease-out opacity-90 hover:opacity-100 scale-90'>
+        <div title='Background Music' className='fixed left-0 top-[15%] z-30 bg-bg4 rounded-r-md ps-[5px] pe-[2px] py-[3px] border border-slate-600/40 cursor-pointer -translate-x-10 hover:-translate-x-[4px] duration-300 ease-out opacity-90 hover:opacity-100 scale-90'>
             <div className='flex justify-center items-center px-1'>
                 <div className='px-[2px] me-[5px]'>
                     <button onClick={toggleMusic} className='text-tpri border-2 border-white/50 rounded-full p-[3px] leading-3 hover:bg-secblue'><i className={isplay ? "bi bi-pause translate-x-[0.5px] inline-block" : "bi bi-play translate-x-[0.5px] inline-block"}></i></button>

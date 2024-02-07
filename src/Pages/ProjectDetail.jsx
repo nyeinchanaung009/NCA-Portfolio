@@ -4,6 +4,7 @@ import {Vueicon} from '../svgicons/Vueicon.jsx'
 import {Tailwindicon} from '../svgicons/Tailwindicon.jsx'
 import { useEffect, useState } from "react"
 import datas from '../Components/project_info.json'
+import { Laravelicon } from "../svgicons/Laravelicon.jsx"
 
 const ProjectDetail = () => {
   const {id} = useParams();
@@ -90,6 +91,9 @@ const ProjectDetail = () => {
                   <h1 className="font-finter text-tsec text-sm font-medium">{pdata.duration}</h1>
                 </div>
               </div>
+              {pdata.laravel && (
+                <h1 className="text-tsec font-fpop font-light text-xs sm:text-sm"><Laravelicon className="text-tsec text-[22px] inline me-1" />Laravel</h1>
+              )}
               {pdata.react && (
                 <h1 className="text-tsec font-fpop font-light text-xs sm:text-sm"><Reacticon className="text-tsec text-[22px] inline me-1" />React Js</h1>
               )}
@@ -128,7 +132,9 @@ const ProjectDetail = () => {
             {/* --------------- pj buttons ------------- */}
             <div className="flex justify-start items-center space-x-5 sm:space-x-8 mt-12">
               <a href={pdata.code_link} target="_blank" className="bg-[#0a0f13] text-[#e6edf3] px-3 sm:px-6 pt-[8px] pb-[7px] border-y border-[#30363d] rounded-sm text-[15px] hover:bg-[#13171c] shadow-lg shadow-slate-600/10"><i className="bi bi-github me-3"></i>View Code</a>
-              <a href={pdata.demo_link} target="_blank" className="bgbtn text-white px-3 sm:px-6 pt-[7px] pb-[6px] border-t-2 border-cyan-400/60 rounded-sm shadow hover:opacity-80 text-[15px]"><i className="bi bi-eye-fill me-3"></i>View Demo</a>
+              {pdata.demo_link && (
+                <a href={pdata.demo_link} target="_blank" className="bgbtn text-white px-3 sm:px-6 pt-[7px] pb-[6px] border-t-2 border-cyan-400/60 rounded-sm shadow hover:opacity-80 text-[15px]"><i className="bi bi-eye-fill me-3"></i>View Demo</a>
+              )}
             </div>
           </div>
 

@@ -23,7 +23,7 @@
     --blurbg2:#90e3ff0d;
 
     --bordercolor:#455672ab;
-    --bordercolor2:#8cb0e90b;
+    --bordercolor2:#8cb0e90f;
 
     --tpri : #ffffff;
     --tsec : #d4e0ee;
@@ -62,7 +62,9 @@
 }
 
 .tstroke{
-    -webkit-text-stroke: 0.1px #6978899c;
+    text-stroke: 0.1px #69749a !important;
+    -webkit-text-stroke: 0.1px #69749a !important;
+    color: transparent !important;
 }
 
 
@@ -107,7 +109,7 @@
 }
 
 .overlay{
-    background:linear-gradient(to bottom,transparent 30%,#151c27d7 90%);
+    background:linear-gradient(to bottom,transparent 30%,#151c2788 90%);
 }
 
 .myfade-in{
@@ -223,19 +225,19 @@ body{
 }
 
 #ball1{
-    animation-delay: 2s;
+    animation-delay: 1.35s;
 }
 
 #ball5{
-    animation-delay: 1.5s;
-}
-
-#ball2{
     animation-delay: 1s;
 }
 
+#ball2{
+    animation-delay: 0.7s;
+}
+
 #ball4{
-    animation-delay: 0.5s;
+    animation-delay: 0.35s;
 }
 
 #ball3{
@@ -248,7 +250,7 @@ body{
 
 .minidot{
     transform-origin: right center;
-    animation : myrotate 32s linear infinite;
+    animation : myrotate 40s linear infinite;
 }
 
 @keyframes myspin {

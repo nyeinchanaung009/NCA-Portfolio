@@ -17,7 +17,7 @@ const Welcome = memo(() => {
           </div>
 
           <div className="w-full sm:w-6/12 md:w-[54%] md:self-end order-1 sm:order-2">
-            <div className="w-[298px] min-[400px]:w-[330px] sm:w-[345px] md:w-[430px] lg:w-[550px] xl:w-[690px] mx-auto -translate-x-6">
+            <div className="w-[320px] min-[400px]:w-[340px] sm:w-[345px] md:w-[430px] lg:w-[550px] xl:w-[690px] mx-auto -translate-x-9">
               <img className="w-full object-contain brightness-[.94] saturate-[1.1] myanimation opacity-0 -translate-x-20 duration-[2.1s] delay-[0.4s] ease" src="/images/home img.png" alt="home image" />
             </div>
           </div>

@@ -47,7 +47,7 @@ const MobileNav = memo(() => {
 
         {!navOpen &&
         <div className='sm:hidden fixed w-full bottom-4 left-0 z-30'>
-            <div className='w-[92%] min-[410px]:w-[400px] mx-auto rounded-md border-t-2 border-bordercolor py-[3px] bg-blurbg shadow flex justify-between items-center px-3'>
+            <div className='w-[92%] min-[410px]:w-[400px] mx-auto rounded-md border-t-2 border-bordercolor py-[5px] bg-blurbg shadow flex justify-between items-center px-3 backdrop-blur-[2px]'>
                 <a href='/' className='hover:scale-95 duration-150 dshadow'>
                     <img className='w-[36px]' src="/icons/logo.png" alt="logo" />
                 </a>
